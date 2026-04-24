@@ -69,6 +69,45 @@ body {
     display: inline-block;
 }
 
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-1 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim-2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% { clip: rect(10px, 9999px, 10px, 0); }
+    10% { clip: rect(85px, 9999px, 140px, 0); }
+    20% { clip: rect(13px, 9999px, 115px, 0); }
+    30% { clip: rect(67px, 9999px, 88px, 0); }
+    40% { clip: rect(144px, 9999px, 150px, 0); }
+    /* ... more steps if needed, but keeping it simple for now */
+    100% { clip: rect(10px, 9999px, 10px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip: rect(65px, 9999px, 100px, 0); }
+    100% { clip: rect(15px, 9999px, 40px, 0); }
+}
+
 .subtitle {
     font-family: var(--font-mono);
     font-size: 1.2rem;
@@ -128,9 +167,9 @@ body {
 }
 
 /* Markdown Styling Override */
-#readme-content h1 { display: none; } /* Hide the duplicate H1 from MD */
+.lang-section h1 { display: none; } /* Hide the duplicate H1 from MD */
 
-#readme-content h2 {
+.lang-section h2 {
     color: var(--accent-color);
     border-bottom: 1px solid var(--glass-border);
     padding-bottom: 10px;
@@ -140,18 +179,18 @@ body {
     letter-spacing: 2px;
 }
 
-#readme-content h3 {
+.lang-section h3 {
     color: var(--accent-secondary);
     margin: 30px 0 15px;
 }
 
-#readme-content p {
+.lang-section p {
     margin-bottom: 20px;
     font-weight: 300;
     font-size: 1.05rem;
 }
 
-#readme-content blockquote {
+.lang-section blockquote {
     border-left: 4px solid var(--accent-color);
     padding: 20px;
     background: rgba(0, 255, 157, 0.05);
@@ -160,11 +199,11 @@ body {
     border-radius: 0 8px 8px 0;
 }
 
-#readme-content ul {
+.lang-section ul, .lang-section ol {
     margin: 20px 0 30px 25px;
 }
 
-#readme-content li {
+.lang-section li {
     margin-bottom: 10px;
 }
 
@@ -195,37 +234,41 @@ body {
 /* Language Switcher UI */
 .lang-switcher {
     position: fixed;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     display: flex;
-    gap: 10px;
+    gap: 8px;
     z-index: 1000;
 }
 
 .lang-btn {
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--glass-border);
     color: var(--text-color);
-    padding: 8px 15px;
+    padding: 8px 16px;
     font-family: var(--font-mono);
     font-size: 0.8rem;
     cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    border-radius: 20px; /* Pill shape */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .lang-btn:hover {
     background: rgba(0, 255, 157, 0.1);
     border-color: var(--accent-color);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.2);
 }
 
 .lang-btn.active {
     background: var(--accent-color);
     color: var(--bg-color);
-    font-weight: bold;
-    box-shadow: 0 0 15px var(--accent-color);
+    font-weight: 700;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
 }
 
 .shadow-glow {
@@ -271,7 +314,101 @@ footer a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .glitch { font-size: 2.5rem; }
-    .glass-card { padding: 20px; }
-    .status-bar { flex-direction: column; align-items: center; gap: 10px; }
+    .hero {
+        padding: 100px 15px 40px;
+    }
+
+    .glitch { 
+        font-size: 2.2rem; 
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+
+    .glitch::before, .glitch::after {
+        display: none; /* Disable expensive glitch layers on mobile for better text clarity */
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .status-bar { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px;
+        font-size: 0.7rem;
+    }
+
+    .lang-switcher {
+        top: 15px;
+        right: 15px;
+    }
+
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+
+    #content-wrapper {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .glass-card { 
+        padding: 25px 15px; 
+    }
+
+    .lang-section h2 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+
+    .premium-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glitch { 
+        font-size: 1.6rem; 
+        letter-spacing: 1px;
+    }
+    
+    .status-bar { 
+        margin-top: 20px; 
+        width: 100%;
+    }
+
+    .status-item {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 8px 15px;
+        border-radius: 4px;
+        width: 100%;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .lang-switcher {
+        position: fixed;
+        bottom: 20px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        background: rgba(10, 15, 25, 0.8);
+        padding: 5px;
+        border-radius: 30px;
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero { padding-top: 40px; }
+}
+
+/* Global Fixes */
+p, li, h1, h2, h3, h4 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
