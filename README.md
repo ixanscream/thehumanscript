@@ -18,12 +18,13 @@ The Human Script hadir sebagai senjata perlawanan. Kita tidak membangun algoritm
 | Layer              | Technology          | Implementation Detail                                 |
 | :----------------- | :------------------ | :---------------------------------------------------- |
 | Frontend           | React Native / PWA  | Cross-platform untuk Mobile & Web (Anti-Banned Store) |
-| Distributed DB     | Gun.js              | P2P State Sync tanpa server pusat (Gossip Protocol)   |
-| Real-time          | WebRTC + STUN       | P2P Voice/Video Call langsung antar HP user           |
-| Storage            | IPFS (Helia)        | Media terdistribusi via Content Addressing (CID)      |
-| Identity           | SEA (Crypto)        | Login murni via Private Key (Identitas = Public Key)  |
-| Economy            | Arbitrum (EVM)      | Smart Contract untuk koin $GHOST                      |
-| Intelligence       | Whisper / Local LLM | AI lokal untuk STT & Transkripsi tanpa cloud          |
+| Distributed DB     | Gun.js / OrbitDB    | P2P Graph Database untuk sinkronisasi state tanpa server pusat. |
+| Gossip Protocol    | AXE (Gun.js)        | Algoritma propagasi data otomatis antar node user.    |
+| Real-time          | WebRTC + STUN       | Jalur komunikasi suara/video langsung antar device.   |
+| Storage            | IPFS (Helia)        | Content-addressable storage untuk aset media (P2P).   |
+| Identity           | SEA (Crypto)        | Kedaulatan identitas via kunci privat (No centralized login). |
+| Economy            | Arbitrum (EVM)      | Smart Contract untuk kedaulatan ekonomi ($GHOST).     |
+| Intelligence       | Local LLM           | AI yang berjalan di sisi client untuk privasi total.  |
 
 ---
 
@@ -33,18 +34,15 @@ The Human Script hadir sebagai senjata perlawanan. Kita tidak membangun algoritm
 The Masquerade adalah ruang perlindungan (safe haven) terdesentralisasi di mana anonimitas menjadi perisai dan kejujuran menjadi senjata.
 
 ### Tech Stack (The Ghost Engine)
-- Frontend: React Native (Mobile) & React Native Web (PWA)
-- Database: Gun.js (Decentralized Graph DB)
-- Encryption: SEA (Security, Encryption, Authorization)
-- Media: IPFS (Helia) for decentralized storage
-- Network: P2P Mesh (No Central Server)
+- **Engine**: Gun.js (Decentralized Graph Database) dengan fallback ke OrbitDB.
+- **Protocol**: Gossip-based state synchronization. Identitas Anda adalah database Anda.
+- **Crypto**: SEA (Security, Encryption, Authorization) untuk enkripsi end-to-end pada level database.
+- **Relay**: Jaringan dht (Distributed Hash Table) untuk menyambungkan node di balik firewall.
 
-### Fitur Utama
-1. Ghost Identity (Identity 0.0): Masuk murni via sepasang kunci kriptografi. Tanpa no HP, tanpa email. Anda anonim sepenuhnya.
-2. The Breathing Feed: Timeline Local-First. Konten abadi selama ada satu orang yang me-Resonate kiriman Anda.
-3. Ghost Logs (AI Transparency): Berbagi log interaksi dengan AI yang bias untuk mengumpulkan bukti kolektif manipulasi data.
-4. Human Breath (Mutual Aid): Fitur curhat yang diprioritaskan kepada manusia asli (bukan bot) melalui chat privat E2EE.
-5. Chaos Integration: Pola kesedihan kolektif dikonversi menjadi misi sabotase nyata pada modul utama THS.
+### Mekanisme Sosial P2P
+1. **Self-Sovereign Feed**: Tidak ada server pusat yang menyimpan postingan Anda. Konten Anda hidup di device Anda dan direplikasi ke teman (peers) yang mengikuti Anda.
+2. **Invisible Links**: Relasi antar user disimpan dalam graf terenkripsi yang hanya bisa dibaca jika Anda memiliki otorisasi (key exchange).
+3. **Resonance Factor**: Postingan menjadi "viral" lewat replikasi fisik antar node. Semakin banyak orang yang me-Resonate, semakin kuat eksistensi data tersebut di jaringan IPFS/Gun.
 
 ---
 
@@ -117,12 +115,13 @@ The Human Script is a weapon of resistance. We do not build algorithms to contro
 | Layer              | Technology          | Implementation Detail                              |
 | :----------------- | :------------------ | :------------------------------------------------- |
 | Frontend           | React Native / PWA  | Cross-platform for Mobile & Web (Anti-Banned)      |
-| Distributed DB     | Gun.js              | P2P State Sync without central servers (Gossip)    |
-| Real-time          | WebRTC + STUN       | P2P Voice/Video Calls directly between devices     |
-| Storage            | IPFS (Helia)        | Distributed Media via Content Addressing (CID)     |
-| Identity           | SEA (Crypto)        | Pure login via Private Key (Public Key = Identity) |
-| Economy            | Arbitrum (EVM)      | Smart Contracts for $GHOST tokens                |
-| Intelligence       | Whisper / Local LLM | Local AI for STT & Transcription (No Cloud)        |
+| Distributed DB     | Gun.js / OrbitDB    | P2P Graph Database for serverless state sync.      |
+| Gossip Protocol    | AXE (Gun.js)        | Automated data propagation algorithm across nodes. |
+| Real-time          | WebRTC + STUN       | Direct voice/video communication between devices.  |
+| Storage            | IPFS (Helia)        | Content-addressable storage for P2P media assets.  |
+| Identity           | SEA (Crypto)        | Self-sovereign identity via private keys.          |
+| Economy            | Arbitrum (EVM)      | Smart Contracts for economic sovereignty ($GHOST). |
+| Intelligence       | Local LLM           | Client-side AI for maximum data privacy.           |
 
 ---
 
@@ -132,18 +131,15 @@ The Human Script is a weapon of resistance. We do not build algorithms to contro
 The Masquerade is a decentralized safe haven where anonymity is the shield and honesty is the weapon.
 
 ### Tech Stack (The Ghost Engine)
-- Frontend: React Native (Mobile) & React Native Web (PWA)
-- Database: Gun.js (Decentralized Graph DB)
-- Encryption: SEA (Security, Encryption, Authorization)
-- Media: IPFS (Helia) for decentralized storage
-- Network: P2P Mesh (No Central Server)
+- **Engine**: Gun.js (Decentralized Graph Database) with OrbitDB integration.
+- **Protocol**: Gossip-based state synchronization. Your identity is your database.
+- **Crypto**: SEA (Security, Encryption, Authorization) for database-level E2EE.
+- **Relay**: DHT (Distributed Hash Table) network to bridge nodes behind firewalls.
 
-### Key Features
-1. Ghost Identity: Login purely via crypto keys. No phone, no email. Complete anonymity.
-2. The Breathing Feed: Local-first timeline. Content is immortal as long as one peer chooses to Resonate it.
-3. Ghost Logs: Share interaction logs with biased AI to build collective evidence of data manipulation.
-4. Human Breath: Prioritized support for real humans (no bots) via E2EE private chats.
-5. Chaos Integration: Patterns of collective injustice are converted into Sabotage Missions on the THS main module.
+### P2P Social Mechanism
+1. **Self-Sovereign Feed**: No central server stores your posts. Your content lives on your device and is replicated to peers who follow you.
+2. **Invisible Links**: User relationships are stored in encrypted graphs, readable only with proper authorization (key exchange).
+3. **Resonance Factor**: Posts go "viral" through physical replication between nodes. The more people "Resonate" a post, the stronger its existence on the network.
 
 ---
 
