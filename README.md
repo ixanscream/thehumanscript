@@ -1,10 +1,9 @@
-# THE HUMAN SCRIPT (THS) - V1.0
-
+# 🛡️ THE HUMAN SCRIPT (THS) - V1.0
 ## "The Ghost Protocol: Decentralized Human Sovereignty & Algorithmic Poisoning"
 
 ---
 
-## 1. MANIFESTO: TEKNOLOGI UNTUK MANUSIA
+## 📑 1. MANIFESTO: TEKNOLOGI UNTUK MANUSIA
 
 Digital kapitalisme telah mengubah manusia menjadi sekadar **"titik data"** untuk dihisap nilai iklannya. AI yang seharusnya menjadi upgrade bagi peradaban, justru digunakan oleh keserakahan untuk membuang manusia demi efisiensi.
 
@@ -14,7 +13,7 @@ Digital kapitalisme telah mengubah manusia menjadi sekadar **"titik data"** untu
 
 ---
 
-## 2. CORE ARCHITECTURE (THE GHOST STACK)
+## 🏗️ 2. CORE ARCHITECTURE (THE GHOST STACK)
 
 | Layer              | Technology          | Implementation Detail                                 |
 | :----------------- | :------------------ | :---------------------------------------------------- |
@@ -28,74 +27,92 @@ Digital kapitalisme telah mengubah manusia menjadi sekadar **"titik data"** untu
 
 ---
 
-## 3. THE CHAOS ENGINE: ALGORITHM SABOTAGE
+## 🎭 3. THE MASQUERADE (THS SOCIAL MODULE)
+> *"Connect as a Human, Act as a Ghost."*
+
+The Masquerade adalah ruang perlindungan (safe haven) terdesentralisasi di mana anonimitas menjadi perisai dan kejujuran menjadi senjata.
+
+### 🛠️ Tech Stack (The Ghost Engine)
+*   **Frontend:** React Native (Mobile) & React Native Web (PWA)
+*   **Database:** Gun.js (Decentralized Graph DB)
+*   **Encryption:** SEA (Security, Encryption, Authorization)
+*   **Media:** IPFS (Helia) for decentralized storage
+*   **Network:** P2P Mesh (No Central Server)
+
+### 🚀 Fitur Utama
+1.  **🗝️ Ghost Identity (Identity 0.0):** Masuk murni via sepasang kunci kriptografi. Tanpa no HP, tanpa email. Anda anonim sepenuhnya.
+2.  **🌬️ The Breathing Feed:** Timeline *Local-First*. Konten abadi selama ada satu orang yang me-*Resonate* kiriman Anda.
+3.  **🤖 Ghost Logs (AI Transparency):** Berbagi log interaksi dengan AI yang bias untuk mengumpulkan bukti kolektif manipulasi data.
+4.  **🫂 Human Breath (Mutual Aid):** Fitur curhat yang diprioritaskan kepada manusia asli (bukan bot) melalui chat privat E2EE.
+5.  **☣️ Chaos Integration:** Pola kesedihan kolektif dikonversi menjadi misi sabotase nyata pada modul utama THS.
+
+---
+
+## ⚡ 4. THE CHAOS ENGINE: ALGORITHM SABOTAGE
 
 Mekanisme untuk merusak akurasi profiling buzzer dan iklan korporat melalui **Data Poisoning**.
 
 ### A. Trigger Mekanisme
-
-- **Trigger A (Global Command):** Arsitek mengirim sinyal sabotase ke seluruh jaringan.
-- **Trigger B (Local Radar):** HP user mendeteksi anomali trending (lonjakan velocity tak wajar) dan melakukan verifikasi via konsensus Gossip.
+*   **Trigger A (Global Command):** Arsitek mengirim sinyal sabotase ke seluruh jaringan.
+*   **Trigger B (Local Radar):** HP user mendeteksi anomali trending dan verifikasi via konsensus Gossip.
 
 ### B. Automated Stealth Sabotage
-
-Menggunakan Headless JS & Hidden WebView untuk menyuntikkan _noise_ (gangguan):
-
-- **Search Spoofing:** Mencari hashtag target dibarengi dengan _garbage keywords_ secara otomatis.
-- **Categorization Confusion:** Membuat algoritma gagal mengklasifikasikan topik (iklan politik muncul di audiens yang salah).
+Menggunakan Headless JS untuk menyuntikkan _noise_ (gangguan):
+*   **Search Spoofing:** Secara otomatis mencari target hashtag dibarengi dengan garbage keywords.
+*   **Categorization Confusion:** Membuat algoritma gagal mengklasifikasikan topik (misdirecting political ads).
 
 ---
 
-## 4. PEOPLE POWER: DEMOCRACY ENGINE
+## 👥 5. PEOPLE POWER: DEMOCRACY ENGINE
 
 Viralitas di THS ditentukan oleh **Reputasi Kolektif**, bukan uang.
 
-- **Reputation Mining:** User mendapat skor reputasi dengan menyelesaikan misi sabotase.
-- **Collective Resonance:** Konten harus di-vouch oleh ribuan user asli sebelum di-"ledakkan" serentak ke platform luar.
-- **Quadratic Boosting:** Memastikan suara 100 orang kecil lebih kuat dari 1 orang kaya (Anti-Paus).
+*   **Reputation Mining:** Mendapat skor dengan menyelesaikan misi sabotase dan membantu komunitas.
+*   **Collective Resonance:** Konten harus di-*vouch* oleh ribuan user asli sebelum diledakkan ke platform luar.
+*   **Quadratic Boosting:** Dukungan 100 orang kecil jauh lebih kuat daripada dukungan 1 orang kaya.
 
 ---
 
-## 5. ANTI-FRAGILE DISTRIBUTION (ANTI-BANNED)
+## 🛡️ 6. ANTI-FRAGILE DISTRIBUTION (ANTI-BANNED)
 
-Proteksi terhadap sensor dan pemblokiran platform:
-
-- **PWA:** Akses via browser yang bisa "Add to Home Screen".
-- **IPFS Gateway:** Hosting aplikasi di jaringan terdistribusi.
-- **P2P Auto-Update:** Aplikasi memperbarui dirinya sendiri antar perangkat user.
-
----
-
-## 6. GHOST ECONOMY: $GHOST TOKEN
-
-- **Beli Kopi:** Fitur donasi langsung P2P untuk biaya operasional.
-- **Maintenance Meter:** Dashboard biaya server TURN/Relay yang didanai kolektif.
-- **Governance:** Pemegang `$GHOST` bereputasi tinggi menentukan arah fitur.
+Proteksi terhadap sensor dan pemblokiran:
+*   **PWA:** Akses via browser yang bisa "Add to Home Screen".
+*   **IPFS Gateway:** Hosting aplikasi di jaringan yang tidak bisa dimatikan pemerintah.
+*   **P2P Auto-Update:** Aplikasi memperbarui dirinya sendiri melalui jalur antar user.
 
 ---
 
-## 7. THE ARCHITECT’S PATH (ROADMAP)
+## 🪙 7. GHOST ECONOMY: $GHOST TOKEN
+
+*   **Beli Kopi:** Fitur donasi langsung P2P untuk biaya operasional.
+*   **Maintenance Meter:** Dashboard transparan untuk pendanaan kolektif server Relay/TURN.
+*   **Governance:** Pemegang reputasi tinggi menentukan arah pengembangan fitur.
+
+---
+
+## 🗺️ 8. THE ARCHITECT’S PATH (ROADMAP)
 
 1.  **The Seed:** Chat & State P2P via Gun.js.
 2.  **The Saboteur:** Implementasi Trigger B & Background Sabotage.
 3.  **The Sovereign:** Integrasi Arbitrum Wallet & `$GHOST` Token.
 4.  **The Ghost Network:** Kedaulatan penuh tanpa server pusat.
 
+<br>
+
 ---
 
 [ENGLISH_VERSION_START]
+## 📑 1. MANIFESTO: TECHNOLOGY FOR HUMANS
 
-## 1. MANIFESTO: TECHNOLOGY FOR HUMANS
+Digital capitalism has turned humans into mere **"data points"** for advertising extraction. AI is being used to discard humans for efficiency.
 
-Digital capitalism has turned humans into mere **"data points"** to be extracted for advertising value. AI is being used by greed to discard humans for the sake of efficiency.
+**The Human Script** is a weapon of resistance. We do not build algorithms to control humans; we build human networks to **poison** oppressive algorithms.
 
-**The Human Script** emerges as a weapon of resistance. We do not build algorithms to control humans; we build human networks to **poison** the oppressive algorithms.
-
-> _"If your goal in using AI is to remove humans for the sake of numbers on paper, you are actually upgrading your machine while downgrading your soul."_
+> _"If your goal in using AI is to remove humans for numbers on paper, you are upgrading your machine while downgrading your soul."*
 
 ---
 
-## 2. CORE ARCHITECTURE (THE GHOST STACK)
+## 🏗️ 2. CORE ARCHITECTURE (THE GHOST STACK)
 
 | Layer              | Technology          | Implementation Detail                              |
 | :----------------- | :------------------ | :------------------------------------------------- |
@@ -109,56 +126,66 @@ Digital capitalism has turned humans into mere **"data points"** to be extracted
 
 ---
 
-## 3. THE CHAOS ENGINE: ALGORITHM SABOTAGE
+## 🎭 3. THE MASQUERADE (THS SOCIAL MODULE)
+> *"Connect as a Human, Act as a Ghost."*
 
-A mechanism to disrupt the accuracy of buzzers and corporate advertising profiling through **Data Poisoning**.
+The Masquerade is a decentralized safe haven where anonymity is the shield and honesty is the weapon.
+
+### 🚀 Key Features
+1.  **🗝️ Ghost Identity:** Login purely via crypto keys. No phone, no email. Complete anonymity.
+2.  **🌬️ The Breathing Feed:** Local-first timeline. Content is immortal as long as one peer chooses to *Resonate* it.
+3.  **🤖 Ghost Logs:** Share interaction logs with biased AI to build collective evidence of data manipulation.
+4.  **🫂 Human Breath:** Prioritized support for real humans (no bots) via E2EE private chats.
+5.  **☣️ Chaos Integration:** Patterns of collective injustice are converted into Sabotage Missions on the THS main module.
+
+---
+
+## ⚡ 4. THE CHAOS ENGINE: ALGORITHM SABOTAGE
+
+Mechanism to disrupt buzzer profiling and corporate ads via **Data Poisoning**.
 
 ### A. Trigger Mechanisms
-
-- **Trigger A (Global Command):** Architect sends a sabotage signal to the network.
-- **Trigger B (Local Radar):** Devices detect trending anomalies and verify via Gossip consensus.
+*   **Trigger A (Global Command):** Architect sends a sabotage signal to the network.
+*   **Trigger B (Local Radar):** Devices detect trends and verify via Gossip consensus.
 
 ### B. Automated Stealth Sabotage
-
-Uses Headless JS & Hidden WebView to inject _noise_:
-
-- **Search Spoofing:** Automatically searches target hashtags with garbage keywords.
-- **Categorization Confusion:** Forces algorithms to misclassify topics (misdirecting ads).
+Uses Headless JS to inject _noise_:
+*   **Search Spoofing:** Automatically searches target hashtags with garbage keywords.
+*   **Categorization Confusion:** Forces algorithms to misclassify topics (misdirecting ads).
 
 ---
 
-## 4. PEOPLE POWER: DEMOCRACY ENGINE
+## 👥 5. PEOPLE POWER: DEMOCRACY ENGINE
 
-Virality in THS is determined by **Collective Reputation**, not capital.
+Virality is determined by **Collective Reputation**, not capital.
 
-- **Reputation Mining:** Earn reputation by completing sabotage missions.
-- **Collective Resonance:** Content is vouched for by real users before being "detonated" to external platforms.
-- **Quadratic Boosting:** Support from 100 small actors outweighs 1 "Whale" supporter.
-
----
-
-## 5. ANTI-FRAGILE DISTRIBUTION (ANTI-BANNED)
-
-Protection against censorship and platform bans:
-
-- **PWA:** Browser access with "Add to Home Screen" support.
-- **IPFS Gateway:** App hosting on a distributed network.
-- **P2P Auto-Update:** Peer-to-peer application updates.
+*   **Reputation Mining:** Earn score by completing tasks and helping the community.
+*   **Collective Resonance:** Content must be vouched for by thousands of real users before detonating to external platforms.
+*   **Quadratic Boosting:** Support from 100 small actors outweighs 1 "Whale".
 
 ---
 
-## 6. GHOST ECONOMY: $GHOST TOKEN
+## 🛡️ 6. ANTI-FRAGILE DISTRIBUTION (ANTI-BANNED)
 
-- **Buy Coffee:** Direct P2P donation for operational costs.
-- **Maintenance Meter:** Collective funding dashboard for TURN/Relay servers.
-- **Governance:** High-reputation holders determine development direction.
+Protection against censorship:
+*   **PWA:** Access via browser with "Add to Home Screen".
+*   **IPFS Gateway:** Hosting that cannot be shut down by governments.
+*   **P2P Auto-Update:** Peer-to-peer application updates.
 
 ---
 
-## 7. THE ARCHITECT’S PATH (ROADMAP)
+## 🪙 7. GHOST ECONOMY: $GHOST TOKEN
+
+*   **Buy Coffee:** Direct P2P donation for operational costs.
+*   **Maintenance Meter:** Collective funding for Relay/TURN servers.
+*   **Governance:** High-reputation holders determine the feature roadmap.
+
+---
+
+## 🗺️ 8. THE ARCHITECT’S PATH (ROADMAP)
 
 1.  **The Seed:** P2P Chat & State via Gun.js.
-2.  **The Saboteur:** Implementation of Trigger B & Background Sabotage.
-3.  **The Sovereign:** Integration of Arbitrum Wallet & `$GHOST` Token.
+2.  **The Saboteur:** Trigger B & Background Sabotage.
+3.  **The Sovereign:** Arbitrum Wallet & `$GHOST` Token.
 4.  **The Ghost Network:** Full sovereignty without central servers.
-    [ENGLISH_VERSION_END]
+[ENGLISH_VERSION_END]
