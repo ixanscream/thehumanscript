@@ -29,11 +29,14 @@
         </div>
     </header>
 
+    <div class="lang-switcher">
+        <button id="btn-id" class="lang-btn active">ID</button>
+        <button id="btn-en" class="lang-btn">EN</button>
+    </div>
+
     <main id="content-wrapper">
-        <section id="readme-content" class="glass-card">
-            <!-- Content will be injected here -->
-            <div class="loading">Infiltrating decentralized nodes...</div>
-        </section>
+        <section id="readme-content-id" class="glass-card lang-section shadow-glow"></section>
+        <section id="readme-content-en" class="glass-card lang-section shadow-glow" style="display:none;"></section>
     </main>
 
     <footer>
@@ -41,26 +44,44 @@
     </footer>
 
     <script>
+        let currentLang = 'id';
+
         async function loadReadme() {
             try {
                 const response = await fetch('README.md');
                 const text = await response.text();
-                const content = document.getElementById('readme-content');
                 
-                // Customize marked renderer for the premium feel
-                const renderer = new marked.Renderer();
-                
-                // Inject the markdown
-                content.innerHTML = marked.parse(text);
-                
-                // Add class to tables for styling
-                content.querySelectorAll('table').forEach(t => t.classList.add('premium-table'));
-                
+                // Split content based on markers
+                const parts = text.split(/\[ENGLISH_VERSION_START\]|\[ENGLISH_VERSION_END\]/);
+                const idContent = parts[0];
+                const enContent = parts[1] || "";
+
+                document.getElementById('readme-content-id').innerHTML = marked.parse(idContent);
+                document.getElementById('readme-content-en').innerHTML = marked.parse(enContent);
+
+                // Add premium styling to tables
+                document.querySelectorAll('table').forEach(t => t.classList.add('premium-table'));
             } catch (error) {
                 console.error('Error loading README:', error);
-                document.getElementById('readme-content').innerHTML = '<p class="error">Access Denied: Could not connect to the Ghost Network.</p>';
             }
         }
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-section').forEach(s => s.style.display = 'none');
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(`readme-content-${lang}`).style.display = 'block';
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            
+            // Add a small glitch effect on switch
+            document.querySelector('.hero').classList.add('glitch-active');
+            setTimeout(() => document.querySelector('.hero').classList.remove('glitch-active'), 300);
+        }
+
+        document.getElementById('btn-id').onclick = () => switchLang('id');
+        document.getElementById('btn-en').onclick = () => switchLang('en');
+
         loadReadme();
     </script>
 </body>

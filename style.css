@@ -192,7 +192,66 @@ body {
     background: rgba(0, 255, 157, 0.02);
 }
 
+/* Language Switcher UI */
+.lang-switcher {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    padding: 8px 15px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.lang-btn:hover {
+    background: rgba(0, 255, 157, 0.1);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.shadow-glow {
+    transition: box-shadow 0.5s ease;
+}
+
+.shadow-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+}
+
+/* Glitch Effect on Switch */
+.glitch-active {
+    animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+}
+
 /* Footer */
+
 footer {
     text-align: center;
     padding: 40px;
