@@ -84,7 +84,7 @@ Proteksi terhadap sensor dan pemblokiran:
 
 ## 7. GHOST ECONOMY: $GHOST TOKEN
 
-- Beli Kopi: Fitur donasi langsung P2P untuk biaya operasional.
+- Fuel the Ghost: Mekanisme dukungan P2P langsung untuk keberlanjutan infrastruktur dan skalabilitas node.
 - Maintenance Meter: Dashboard transparan untuk pendanaan kolektif server Relay/TURN.
 - Governance: Pemegang reputasi tinggi menentukan arah pengembangan fitur.
 
@@ -183,7 +183,7 @@ Protection against censorship:
 
 ## 7. GHOST ECONOMY: $GHOST TOKEN
 
-- Buy Coffee: Direct P2P donation for operational costs.
+- Fuel the Ghost: Direct P2P support mechanism for infrastructure sustainability and node scalability.
 - Maintenance Meter: Collective funding for Relay/TURN servers.
 - Governance: High-reputation holders determine the feature roadmap.
 
