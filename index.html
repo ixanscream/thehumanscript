@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE HUMAN SCRIPT | Ghost Protocol</title>
+    <meta name="description" content="Decentralized Human Sovereignty & Algorithmic Poisoning">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="noise"></div>
+    
+    <header class="hero">
+        <div class="glitch-container">
+            <h1 class="glitch" data-text="THE HUMAN SCRIPT">THE HUMAN SCRIPT</h1>
+        </div>
+        <p class="subtitle">SYSTEM VERSION 2.3 | THE GHOST PROTOCOL</p>
+        <div class="status-bar">
+            <span class="status-item"><span class="dot pulse"></span> NETWORK: DECENTRALIZED</span>
+            <span class="status-item"><span class="dot"></span> STATUS: ACTIVE</span>
+        </div>
+    </header>
+
+    <main id="content-wrapper">
+        <section id="readme-content" class="glass-card">
+            <!-- Content will be injected here -->
+            <div class="loading">Infiltrating decentralized nodes...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 THE ARCHITECTS | <a href="https://github.com/ixanscream/thehumanscript" target="_blank">SECURE REPOSITORY</a></p>
+    </footer>
+
+    <script>
+        async function loadReadme() {
+            try {
+                const response = await fetch('README.md');
+                const text = await response.text();
+                const content = document.getElementById('readme-content');
+                
+                // Customize marked renderer for the premium feel
+                const renderer = new marked.Renderer();
+                
+                // Inject the markdown
+                content.innerHTML = marked.parse(text);
+                
+                // Add class to tables for styling
+                content.querySelectorAll('table').forEach(t => t.classList.add('premium-table'));
+                
+            } catch (error) {
+                console.error('Error loading README:', error);
+                document.getElementById('readme-content').innerHTML = '<p class="error">Access Denied: Could not connect to the Ghost Network.</p>';
+            }
+        }
+        loadReadme();
+    </script>
+</body>
+</html>
